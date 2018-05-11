@@ -11,17 +11,16 @@ var worldScoreAddr = "";
 var worldScoreTime = "";
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
-var to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
-
 $(function () {
-    var to = to;
+    const to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
     var value = 0;
     var callFunction = "getWR";
     var args = "[]";
     nebPay.simulateCall(to, value, callFunction, args, {
+        callback: "https://pay.nebulas.io/api/mainnet/pay",
         listener: function (resp) {
             try{
-                console.info(resp)
+                console.info('callback resp: '+resp);
                 var record = JSON.parse(resp.result);
                 if(record !== "null"){
                     worldScore = parseInt(record.score);
@@ -38,6 +37,7 @@ $(function () {
     });
 })
 $('.upload').click(function () {
+    const to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
     var to = to;
     var value = 0;
     var callFunction = "setR";
