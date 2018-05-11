@@ -11,7 +11,7 @@ var worldScoreAddr = "";
 var worldScoreTime = "";
 var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 var nebPay = new NebPay();
-var to = "n1teRF96DFUjLwA2TKWB1KkdczBouNodbRs";
+var to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
 
 $(function () {
     var to = to;
