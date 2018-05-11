@@ -24,7 +24,12 @@ h2 {
     display: block;
     box-shadow: 0 0 5px grey
 }
-
+.footer a {
+    background: white;
+    text-decoration: none;
+    color: black;
+    padding: 0 4px;
+}
 .frame {
     background-color: antiquewhite;
     width: 150px;
@@ -45,7 +50,7 @@ h2 {
     margin: 0 auto;
     z-index: 2;
     margin-top: -55%;
-    margin-left:44%;
+    margin-left:44.5%;
     display: none;
 }
 .start {
