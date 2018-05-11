@@ -9,9 +9,12 @@ var heightObj = {};
 var worldScore = 0;
 var worldScoreAddr = "";
 var worldScoreTime = "";
-var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+var NebPay = require("nebpay");    
 var nebPay = new NebPay();
-$(function () {
+// $(function () {
+//     checkWR();
+// });
+function checkWR() {
     const to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
     var value = 0;
     var callFunction = "getWR";
@@ -35,7 +38,7 @@ $(function () {
 
         }
     });
-})
+}
 $('.upload').click(function () {
     const to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
     var value = 0;
@@ -220,6 +223,8 @@ function updatePipe() {
 }
 
 $(".start").click(function () {
+    //重新检查世界纪录
+    checkWR();
     $(".start").css("display", "none");
     $(".upload").css("display","none");
     $(".top").css("display","none");
