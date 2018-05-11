@@ -38,7 +38,6 @@ $(function () {
 })
 $('.upload').click(function () {
     const to = "n1pkoCryWscT42vgDH1gfigAQWNYbjr8Noq";
-    var to = to;
     var value = 0;
     var callFunction = "setR";
     var callArgs = "["+score+"]";
