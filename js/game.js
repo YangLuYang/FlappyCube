@@ -20,7 +20,7 @@ $(function () {
         callback: "https://pay.nebulas.io/api/mainnet/pay",
         listener: function (resp) {
             try{
-                console.info('callback resp: '+resp);
+                console.info('callback resp: '+JSON.stringify(resp));
                 var record = JSON.parse(resp.result);
                 if(record !== "null"){
                     worldScore = parseInt(record.score);
